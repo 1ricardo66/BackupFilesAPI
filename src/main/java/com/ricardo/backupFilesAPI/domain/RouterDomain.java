@@ -9,7 +9,7 @@ import org.springframework.data.annotation.Id;
 
 @Entity
 @Table(name="TB_Router")
-public class RoutersDomain {
+public class RouterDomain {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
