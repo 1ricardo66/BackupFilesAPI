@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.ricardo.backupFilesAPI.domain.RouterDomain;
 import com.ricardo.backupFilesAPI.service.RouterService;
@@ -35,5 +36,11 @@ public class RouterController {
 	public ResponseEntity<?> postRouter(@RequestBody RouterDomain router){
 		RouterDomain routerReturn = routerService.postRouter(router);
 		return ResponseEntity.ok().body(routerReturn);
+	}
+	
+	@RequestMapping(value="/")
+	public String getHomePage () {
+		
+		return "home";
 	}
 }
